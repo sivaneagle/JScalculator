@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<style>
+    #mdiv{
+        width: 360px;
+        background:lightslategray;
+        height: 500px;
+        margin: 10px;
+    }
+    #screen{
+        
+        height: 70px;
+        background:white;
+        border:3px solid;
+        margin:10px
+        
+    }
+    #cname{
+        color: white;
+        margin-right: 10px;
+    }
+    #keydiv{
+        
+        height: 330px;
+        background:white;
+        margin: 10px;
+        border:3px solid;
+        
+    }
+    button{
+        background:black;
+        color: white;
+        width: 95px;
+        height: 40px;
+        margin: 6px;
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style:oblique;
+        font-weight: bold;
+    }
+    #dis{
+        height: 65px;
+        width: 98%;
+        font-size: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style:oblique;
+        font-weight: bold;
+            
+    }
+
+</style>
+
+
+<body>
+    <div id="mdiv">
+        <h3 id="cname">_ _ _ _ _ _ _ _ _ _  calc10_ _ _ _ _ _ _ _ _ _ _ </h3>
+        
+        <div id="screen">
+            
+            <input type="text" name="" id="dis">
+        </div><br>
+
+        <div id="keydiv">
+            <button onclick="show(9)">9</button>
+            <button onclick="show(8)">8</button>
+            <button onclick="show(7)">7</button><br>
+            
+            <button onclick="show(6)">6</button>
+            <button onclick="show(5)">5</button>
+            <button onclick="show(4)">4</button><br>
+           
+            <button onclick="show(3)">3</button>
+            <button onclick="show(2)">2</button>
+            <button onclick="show(1)">1</button><br>
+           
+            <button onclick="show('+')">+</button>
+            <button onclick="show(0)">0</button>
+            <button onclick="show('-')">-</button><br>
+            
+            <button onclick="show('*')">*</button>
+            <button onclick="show('/')">/</button>
+            <button onclick="show('%')">%</button><br>
+
+                        
+            <button onclick="sclear()">C</button>
+            <button onclick="sequal()">=</button>
+            <button onclick="show('.')">.</button><br>
+
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+        function show(num){
+            document.getElementById("dis").value=document.getElementById("dis").value+num
+          
+           }
+        function sclear(){
+            document.getElementById("dis").value=""
+        }
+        
+        function sequal(){
+            var text =document.getElementById("dis").value
+            var result=eval(text)
+            document.getElementById("dis").value=result
+        }
+    
+        
+
+    </script>
+    
+</body>
+</html>
